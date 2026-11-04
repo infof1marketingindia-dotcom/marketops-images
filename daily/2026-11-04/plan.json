@@ -1,0 +1,51 @@
+[
+  {
+    "slot": "1000",
+    "topic": "All six services together",
+    "title": "What we do",
+    "items": [
+      "Ecommerce Solutions",
+      "Performance Ads",
+      "Creative Studio",
+      "Web Development",
+      "SEO",
+      "Overseas Growth"
+    ],
+    "line": "",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-04/1000.png"
+  },
+  {
+    "slot": "1201",
+    "topic": "What we handle on Amazon",
+    "title": "What we handle on Amazon",
+    "items": [
+      "Account management",
+      "Listing optimisation",
+      "Sponsored Ads",
+      "Marketplace visuals"
+    ],
+    "line": "",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-04/1201.png"
+  },
+  {
+    "slot": "1600",
+    "topic": "One team for marketplaces, ads, creatives, websites and SEO",
+    "title": "One team for all of it",
+    "items": [],
+    "line": "Marketplaces, ads, creatives, websites and SEO, handled by one team.",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-04/1600.png"
+  },
+  {
+    "slot": "1900",
+    "topic": "Who we work with",
+    "title": "Who we work with",
+    "items": [
+      "D2C founders",
+      "Manufacturers going online",
+      "Ecommerce managers",
+      "Exporters and craft brands"
+    ],
+    "line": "",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-04/1900.png"
+  }
+]
