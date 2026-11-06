@@ -1,0 +1,41 @@
+[
+  {
+    "slot": "1000",
+    "topic": "What we handle for quick commerce",
+    "title": "What we handle for quick commerce",
+    "items": [
+      "Account management",
+      "Listing optimisation",
+      "Ads",
+      "Product visuals"
+    ],
+    "line": "",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-06/1000.png"
+  },
+  {
+    "slot": "1600",
+    "topic": "Creative Studio",
+    "title": "What our Creative Studio makes",
+    "items": [
+      "Product images",
+      "Ad creatives",
+      "Social media",
+      "Marketplace visuals"
+    ],
+    "line": "",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-06/1600.png"
+  },
+  {
+    "slot": "1900",
+    "topic": "Overseas Growth",
+    "title": "Start selling in new countries",
+    "items": [
+      "The right market choice",
+      "Local listings",
+      "Targeted global campaigns"
+    ],
+    "line": "",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-06/1900.png",
+    "video_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-06/1900.mp4"
+  }
+]
