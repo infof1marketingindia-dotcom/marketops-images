@@ -1,0 +1,48 @@
+[
+  {
+    "slot": "1000",
+    "topic": "Listing gets traffic but low conversion",
+    "problem": "People visit the product page but most leave without buying.",
+    "solution": "Make the page answer buyer doubts fast: clearest photo first, the main doubt answered in the title, size, use and care shown clearly, and fix what bad reviews complain about.",
+    "title": "Lots of visitors, very few orders",
+    "items": [
+      "Put your clearest photo first",
+      "Answer the main doubt in the title",
+      "Show size, use and care clearly",
+      "Fix what bad reviews complain about"
+    ],
+    "line": "",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-07/1000.png"
+  },
+  {
+    "slot": "1600",
+    "topic": "Stock-outs during a sale",
+    "problem": "Best sellers run out of stock in the middle of a sale and sales stop.",
+    "solution": "Plan stock from last sale's daily sales, send stock early, pause ads when stock runs low, and set reorder alerts for best sellers.",
+    "title": "Stock ran out in the middle of a sale",
+    "items": [
+      "Check daily sales from your last sale",
+      "Plan and send stock early",
+      "Pause ads when stock runs low",
+      "Set a reorder alert for best sellers"
+    ],
+    "line": "",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-07/1600.png"
+  },
+  {
+    "slot": "1900",
+    "topic": "Ad spend up, profit flat",
+    "problem": "Ad spend keeps rising but profit does not grow.",
+    "solution": "Work out true profit after fees and returns, cut search terms that never sell, move budget to products that make money, and track profit instead of only sales.",
+    "title": "Ad spend is up but profit is flat",
+    "items": [
+      "Work out profit after fees and returns",
+      "Cut search terms that never sell",
+      "Move budget to products that make money",
+      "Track profit, not just sales"
+    ],
+    "line": "MarketOps can help you see where the money goes.",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-07/1900.png",
+    "video_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-07/1900.mp4"
+  }
+]
