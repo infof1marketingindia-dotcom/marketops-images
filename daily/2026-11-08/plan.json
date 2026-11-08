@@ -1,0 +1,48 @@
+[
+  {
+    "slot": "1000",
+    "topic": "High returns eating margin",
+    "problem": "Too many orders come back, and every return costs shipping, fees and damaged stock, so the margin keeps shrinking.",
+    "solution": "Read the return reasons every week, fix sizes and photos that set the wrong expectation, improve packing to stop damage, and pause ads on products that keep coming back.",
+    "title": "Returns are eating my margin",
+    "items": [
+      "Read the return reasons every week",
+      "Fix sizes and photos that mislead",
+      "Pack better to stop damage",
+      "Pause ads on high-return products"
+    ],
+    "line": "",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-08/1000.png"
+  },
+  {
+    "slot": "1600",
+    "topic": "Too many freelancers, nobody responsible",
+    "problem": "Ads, listings, creatives and the website are split across different freelancers, and when sales drop nobody owns the problem.",
+    "solution": "Write down who owns each task, make one person responsible for results, keep one shared weekly report, and hold one short weekly review with everyone.",
+    "title": "Five freelancers, nobody in charge",
+    "items": [
+      "Write down who owns each task",
+      "Pick one person to own the results",
+      "Keep one shared weekly report",
+      "Hold one short weekly review"
+    ],
+    "line": "",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-08/1600.png"
+  },
+  {
+    "slot": "1900",
+    "topic": "Same ad used until people stop responding",
+    "problem": "The same ads have run for months and people have stopped clicking, so results keep falling.",
+    "solution": "Watch whether clicks drop week on week, make fresh creatives every few weeks, test new hooks rather than only new colours, and retire ads people no longer click.",
+    "title": "My ads have stopped working",
+    "items": [
+      "Check if clicks are dropping week on week",
+      "Make fresh creatives every few weeks",
+      "Test new hooks, not just new colours",
+      "Retire ads people no longer click"
+    ],
+    "line": "MarketOps can help keep your ads fresh.",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-08/1900.png",
+    "video_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-08/1900.mp4"
+  }
+]
