@@ -1,0 +1,49 @@
+[
+  {
+    "slot": "1000",
+    "topic": "Fees and costs not counted in the selling price",
+    "problem": "Orders keep coming, but after marketplace fees, shipping, returns and ad spend there is little or no profit left, because the selling price was set without counting every cost.",
+    "solution": "Write down every cost for each product, include fees, shipping and returns, count ad spend per order, and change or stop prices that lose money.",
+    "title": "I sell a lot but make no profit",
+    "items": [
+      "List every cost per product",
+      "Add fees, shipping and returns",
+      "Count ad spend per order too",
+      "Fix prices that lose money"
+    ],
+    "line": "",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-09/1000.png"
+  },
+  {
+    "slot": "1600",
+    "topic": "Own website does not build trust",
+    "problem": "People land on the website but leave without buying, because the site does not give them enough reasons to trust a brand they do not know yet.",
+    "solution": "Make contact details easy to find, explain shipping and returns in plain words, use real photos of the actual product, and show reviews from real buyers.",
+    "title": "My website doesn't build trust",
+    "items": [
+      "Show clear contact details",
+      "Explain shipping and returns",
+      "Use real product photos",
+      "Show real buyer reviews"
+    ],
+    "line": "",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-09/1600.png"
+  },
+  {
+    "slot": "1900",
+    "topic": "Reports with numbers but no next step",
+    "problem": "Every week the report is full of numbers, but nobody knows what to do differently, so the same problems repeat.",
+    "solution": "Open each report with what changed, explain why it changed, agree on one or two actions, name who owns each one, and check them in the next report.",
+    "title": "Reports full of numbers, no next step",
+    "items": [
+      "Start with what changed",
+      "Explain why it changed",
+      "Agree on one or two actions",
+      "Name who does each action",
+      "Review them next week"
+    ],
+    "line": "A good report tells you what to do next.",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-09/1900.png",
+    "video_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-09/1900.mp4"
+  }
+]
