@@ -1,0 +1,51 @@
+[
+  {
+    "slot": "1000",
+    "service": "SEO",
+    "topic": "Website not found in search",
+    "problem": "The website exists, but it does not show up when buyers search for the products it sells, so it gets little of the right traffic.",
+    "solution": "The MarketOps SEO team finds the searches real buyers use, matches each page to those searches, fixes technical issues that stop pages being found, and tracks organic traffic every month.",
+    "title": "My website doesn't show up in search",
+    "items": [
+      "We find what your buyers search for",
+      "We match pages to real searches",
+      "We fix issues that block search",
+      "We track organic traffic monthly"
+    ],
+    "line": "MarketOps SEO. Found for the searches that matter.",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-10/1000.png"
+  },
+  {
+    "slot": "1600",
+    "service": "Overseas Growth",
+    "topic": "Not sure which country to start with",
+    "problem": "A seller wants to sell abroad but does not know which country or marketplace to start with, so the plan never moves.",
+    "solution": "The MarketOps Overseas Growth team compares demand across countries, picks the right marketplace, adapts listings for local buyers and plans the launch in clear steps.",
+    "title": "Which country should I sell in first?",
+    "items": [
+      "We compare demand by country",
+      "We pick the right marketplace",
+      "We adapt listings for local buyers",
+      "We plan each launch in steps"
+    ],
+    "line": "MarketOps Overseas Growth. The right market, set up properly.",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-10/1600.png"
+  },
+  {
+    "slot": "1900",
+    "service": "Creative Studio",
+    "topic": "Products look ordinary next to competitors",
+    "problem": "Next to other sellers, the products look plain, so shoppers scroll past and choose a listing that looks better.",
+    "solution": "The MarketOps Creative Studio team creates sharp product images, shows size, use and detail, designs visuals for every listing and keeps one consistent look across the store.",
+    "title": "My products look ordinary",
+    "items": [
+      "We create sharp product images",
+      "We show size, use and detail",
+      "We design visuals for every listing",
+      "We keep one look across your store"
+    ],
+    "line": "MarketOps Creative Studio. Products people notice and trust.",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-10/1900.png",
+    "video_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-10/1900.mp4"
+  }
+]
