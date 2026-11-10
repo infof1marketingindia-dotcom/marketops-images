@@ -1,0 +1,875 @@
+{
+ "start_note": "Day 1 is the first day the agent runs; see state/progress.json",
+ "days": [
+  {
+   "day": 1,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M1",
+     "title": "Why Prices End in 99",
+     "facts": "Left-digit effect: we read left to right, the first digit sticks, so 399 feels closer to 300 than 400. Use for everyday products; luxury items often use round prices like 4,000."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "B1",
+     "title": "Amazon Was Almost Called Cadabra",
+     "facts": "Jeff Bezos started Amazon in 1994 as an online bookstore, working from a garage near Seattle. First name idea Cadabra; a lawyer misheard it as 'cadaver'. Renamed after the Amazon, the world's largest river by volume."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "1A",
+     "title": "A Day on Venus Is Longer Than Its Year",
+     "facts": "Venus orbits the Sun in 225 Earth days but one rotation takes 243 Earth days. It spins backwards, so the Sun rises in the west."
+    }
+   ]
+  },
+  {
+   "day": 2,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M2",
+     "title": "The Decoy Price Trick",
+     "facts": "Dan Ariely experiment: online $59, print $125, print + online $125. Few chose print alone, most chose the combo. Remove print-only and most chose the cheaper online plan."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "21C",
+     "title": "Post-it Notes Came From a Failed Glue",
+     "facts": "1968: 3M scientist Spencer Silver made a weak, re-stickable adhesive while trying to make a strong one. Colleague Art Fry used it for bookmarks in his choir book. Post-it Notes reached stores in 1980."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "1B",
+     "title": "Octopuses Have 3 Hearts and Blue Blood",
+     "facts": "Two hearts pump blood through the gills, one to the body. Copper-based blood is blue. The main heart stops while swimming, so they prefer crawling."
+    }
+   ]
+  },
+  {
+   "day": 3,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M3",
+     "title": "Sell the Benefit, Not the Feature",
+     "facts": "People buy the hole, not the drill. Features = what it has, benefits = what the customer gets. iPod 2001: '1,000 songs in your pocket'. Rewrite the first line of your ad as the result."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "B2",
+     "title": "Google's First Name Was BackRub",
+     "facts": "1996 Stanford project by Larry Page and Sergey Brin was called BackRub because it ranked pages by backlinks. Renamed Google from 'googol', a 1 followed by 100 zeros."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "1C",
+     "title": "Cleopatra Lived Closer to the Moon Landing Than the Pyramids",
+     "facts": "Great Pyramid built around 2560 BC; Cleopatra born 69 BC (about 2,500 years later); Moon landing 1969 (about 2,000 years after her)."
+    }
+   ]
+  },
+  {
+   "day": 4,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M4",
+     "title": "The 3-Second Hook",
+     "facts": "A video ad has about 3 seconds to stop the scroll. Don't open with a logo or 'Hi everyone'. Open with the problem, the result or a surprise; show before-and-after first."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "18C",
+     "title": "Bubble Wrap Was Meant to Be Wallpaper",
+     "facts": "1957: engineers Alfred Fielding and Marc Chavannes sealed two shower curtains together to make textured wallpaper. It flopped, so did greenhouse insulation. IBM used it to ship computers and it took off."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "2B",
+     "title": "Wombats Poop Cubes",
+     "facts": "Wombats' intestines stretch unevenly, shaping cube droppings (2018 study). They stack them on rocks and logs to mark territory; cubes don't roll away."
+    }
+   ]
+  },
+  {
+   "day": 5,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M5",
+     "title": "Put Reviews Next to the Buy Button",
+     "facts": "Most shoppers check reviews before buying. Put star rating and review count next to the price and buy button; add real photo reviews."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "B3",
+     "title": "Nokia Started as a Paper Mill",
+     "facts": "Nokia began in 1865 as a paper mill in Finland, founded by Fredrik Idestam. Later made rubber boots and cables before mobile phones."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "3C",
+     "title": "Sharks Are Older Than Trees",
+     "facts": "Earliest sharks about 450 million years ago; first true trees about 385 million years ago."
+    }
+   ]
+  },
+  {
+   "day": 6,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M6",
+     "title": "One Ad, One Action",
+     "facts": "Asking for three actions gets none. One clear next step per ad, post or landing page: shop now, book a call, or download the guide."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "17C",
+     "title": "Play-Doh Started as Wallpaper Cleaner",
+     "facts": "1930s Cincinnati company Kutol sold putty to clean coal soot off wallpaper. Sales fell as heating got cleaner; kids used it for modelling at school. Relaunched as a toy in 1956."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "2C",
+     "title": "Oxford Is Older Than the Aztec Empire",
+     "facts": "Teaching at Oxford started by 1096; the Aztecs founded Tenochtitlan in 1325."
+    }
+   ]
+  },
+  {
+   "day": 7,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M7",
+     "title": "Price Anchoring",
+     "facts": "The first price seen changes how others feel. Show premium 10,000 first and 4,000 feels reasonable; show original price crossed out. The anchor must be a real price; fake MRPs break trust and can break consumer law."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "B4",
+     "title": "Coca-Cola Sold 9 Drinks a Day at First",
+     "facts": "Pharmacist John Pemberton created Coca-Cola in Atlanta in 1886. In its first year it sold about nine drinks a day on average, per Coca-Cola's own history."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "5C",
+     "title": "Myth Busted: Napoleon Wasn't Short",
+     "facts": "About 5 ft 7 in (170 cm), average or above for his time. Confusion from longer French inches and British cartoons."
+    }
+   ]
+  },
+  {
+   "day": 8,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M8",
+     "title": "Use Loss Aversion in Your Copy",
+     "facts": "Kahneman and Tversky: losses feel roughly twice as strong as equal gains. 'Stop losing 2,000 a month on electricity' beats 'Save 2,000'. Keep it honest, not scary."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "8C",
+     "title": "Nintendo Started Selling Playing Cards",
+     "facts": "Founded 1889 in Kyoto, Japan, making hand-painted hanafuda playing cards. Tried taxis, instant rice and hotels. The NES came out in 1983."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "6A",
+     "title": "More Trees on Earth Than Stars in the Galaxy",
+     "facts": "A 2015 study estimated about 3 trillion trees; the Milky Way has about 100 to 400 billion stars."
+    }
+   ]
+  },
+  {
+   "day": 9,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M9",
+     "title": "The Free Shipping Threshold",
+     "facts": "Set free shipping a little above average order value (average 800 -> free above 999). Show 'Add 199 more for free shipping' in the cart."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "B5",
+     "title": "What IKEA's Name Means",
+     "facts": "IKEA = Ingvar Kamprad (founder) + Elmtaryd (family farm) + Agunnaryd (home village in Sweden). He founded it in 1943 at age 17."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "3A",
+     "title": "Try to Hum With Your Nose Closed",
+     "facts": "Humming with a closed mouth needs air out through the nose; pinch it and the hum stops within a second or two. Ask viewers to try it."
+    }
+   ]
+  },
+  {
+   "day": 10,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M10",
+     "title": "Why Retargeting Works",
+     "facts": "Most visitors don't buy on the first visit. Retargeting shows ads to past visitors and cart abandoners; give a new reason (reviews, guarantee, small offer) and cap frequency."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "19C",
+     "title": "A Melted Chocolate Bar Led to the Microwave",
+     "facts": "1945: Raytheon engineer Percy Spencer noticed a chocolate bar in his pocket melted near radar equipment. Popcorn popped next. The first microwave oven was almost as tall as a person."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "11A",
+     "title": "A Teaspoon of Neutron Star Weighs a Billion Tons",
+     "facts": "A neutron star packs more mass than the Sun into a ball about 20 km wide; a teaspoon would weigh about a billion tons on Earth."
+    }
+   ]
+  },
+  {
+   "day": 11,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M11",
+     "title": "Negative Keywords in Google Ads",
+     "facts": "Ads can show for searches like 'free shoes' or 'shoe store jobs'. Check the search terms report weekly and add irrelevant terms as negative keywords."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "B6",
+     "title": "Sony's First Product Was a Rice Cooker",
+     "facts": "After WWII, Sony's founders (Tokyo Tsushin Kogyo, 1946) built an electric rice cooker that often burned or undercooked rice. It didn't sell. They moved on to tape recorders and transistor radios."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "4B",
+     "title": "Crows Remember Your Face",
+     "facts": "University of Washington researchers wore a mask while catching crows; years later crows scolded anyone in that mask, even birds never caught."
+    }
+   ]
+  },
+  {
+   "day": 12,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M12",
+     "title": "Know Your Break-Even ROAS",
+     "facts": "ROAS = sales / ad spend. Break-even ROAS = 1 / profit margin (before ads). 25% margin -> break-even ROAS 4. A ROAS of 3 then loses money."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "20C",
+     "title": "Velcro Was Inspired by a Dog Walk",
+     "facts": "1941: Swiss engineer George de Mestral found burrs stuck to his clothes and dog. Under a microscope: tiny hooks catching loops. Name from French velours (velvet) + crochet (hook)."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "7A",
+     "title": "Lightning Is Hotter Than the Sun's Surface",
+     "facts": "Lightning heats air to nearly 30,000 °C, about five times the Sun's surface (about 5,500 °C). The air expands explosively: thunder."
+    }
+   ]
+  },
+  {
+   "day": 13,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M13",
+     "title": "Put the Keyword First in Product Titles",
+     "facts": "On phones titles get cut off. Lead with what people search: product type and key feature, e.g. 'Cotton bedsheet, double size, 200 thread count'. No keyword stuffing."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "B7",
+     "title": "YouTube Started as a Dating Site Idea",
+     "facts": "Founded 2005 by Chad Hurley, Steve Chen and Jawed Karim. The first idea was a video dating site; nobody uploaded dating videos, so they opened it to any video. First video 'Me at the zoo', April 2005. Google bought it in 2006 for $1.65 billion."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "6C",
+     "title": "Mammoths Were Alive When the Pyramids Were Built",
+     "facts": "A mammoth group survived on Wrangel Island until about 4,000 years ago; the Great Pyramid was finished about 4,500 years ago."
+    }
+   ]
+  },
+  {
+   "day": 14,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M14",
+     "title": "Main Image Rules That Sell",
+     "facts": "On Amazon the main image needs a pure white background and the product should fill about 85% of the frame. Use other images for in-use, size, features and box contents."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "25C",
+     "title": "The Pringles Can Designer Was Buried in One",
+     "facts": "Fredric Baur, the chemist who designed the Pringles tube, asked for his ashes to be placed in one. When he died in 2008 his family kept that wish."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "5A",
+     "title": "You're Taller in the Morning",
+     "facts": "Spinal discs get squashed during the day and recover overnight; most people are about 1 cm taller after waking."
+    }
+   ]
+  },
+  {
+   "day": 15,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M15",
+     "title": "Steal the Words From Your Reviews",
+     "facts": "Use customers' exact words from reviews in ads ('finally stopped my back pain'). Read 3-star reviews to find doubts and answer them in ads."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "B8",
+     "title": "Netflix Offered Itself to Blockbuster",
+     "facts": "In 2000 Netflix's founders offered to sell to Blockbuster for $50 million. Blockbuster said no. Blockbuster filed for bankruptcy in 2010; Netflix became a streaming giant."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "11C",
+     "title": "Myth Busted: You Can't See the Great Wall From Space",
+     "facts": "Only a few metres wide and the colour of the land. China's first astronaut Yang Liwei said in 2003 he couldn't see it."
+    }
+   ]
+  },
+  {
+   "day": 16,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M16",
+     "title": "Test One Thing at a Time",
+     "facts": "Change five things and you learn nothing. A/B test one element (headline, image or price), similar audiences, same time, enough clicks, keep the winner."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "15C",
+     "title": "Ketchup Was Sold as Medicine",
+     "facts": "1830s: Dr. John Cook Bennett claimed tomatoes treated indigestion; tomato pills were sold across the US. Early ketchups were made from mushrooms, walnuts or fish."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "13B",
+     "title": "Owls Can't Move Their Eyes",
+     "facts": "Owl eyes are tube-shaped and held by bone; they turn the head up to about 270 degrees, with special blood vessels in the neck."
+    }
+   ]
+  },
+  {
+   "day": 17,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M17",
+     "title": "Good, Better, Best Pricing",
+     "facts": "Compromise effect: with three options many pick the middle. Make the middle the plan you want to sell; label 'Most popular' only if true."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "B9",
+     "title": "Instagram Started as Burbn",
+     "facts": "Kevin Systrom's first app, Burbn, was a complicated check-in app. He and Mike Krieger cut it down to photo sharing and launched Instagram in October 2010. Facebook bought it in 2012 for $1 billion."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "14A",
+     "title": "Saturn Is Less Dense Than Water",
+     "facts": "Saturn is mostly hydrogen and helium; average density about 0.69 g/cm3, less than water's 1."
+    }
+   ]
+  },
+  {
+   "day": 18,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M18",
+     "title": "Win Back Abandoned Carts",
+     "facts": "Remind within a few hours by email, or WhatsApp if they agreed to messages, with the product photo. A second message a day later answering a doubt like delivery or returns."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "12C",
+     "title": "The First Webcam Watched a Coffee Pot",
+     "facts": "1991: University of Cambridge scientists pointed a camera at a coffee pot so they'd stop walking to an empty pot. Went on the web in 1993."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "16B",
+     "title": "The Pistol Shrimp's Snap",
+     "facts": "It snaps its claw so fast it forms a bubble; the collapse is one of the loudest sounds in the ocean, stuns prey, reaches thousands of degrees for an instant and gives a tiny flash of light."
+    }
+   ]
+  },
+  {
+   "day": 19,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M19",
+     "title": "The Peak-End Rule",
+     "facts": "Kahneman's peak-end rule: people judge an experience by its best moment and its end. Make unboxing special and end with a thank-you note or follow-up."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "B10",
+     "title": "Samsung Started Selling Dried Fish",
+     "facts": "Lee Byung-chul founded Samsung in 1938 in Daegu, Korea, as a small trading company selling dried fish, vegetables and noodles. 'Samsung' means 'three stars'. Electronics came decades later."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "17B",
+     "title": "Myth Busted: Goldfish Don't Have 3-Second Memories",
+     "facts": "Goldfish have been trained to push levers, swim mazes and respond to feeding sounds, remembering for months."
+    }
+   ]
+  },
+  {
+   "day": 20,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M20",
+     "title": "The Power of 'Because'",
+     "facts": "1978 copy machine study (Ellen Langer): with no reason about 60% let someone cut in; with 'because I have to make copies' about 93% agreed. Give a reason in ads."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "B11",
+     "title": "Domino's Admitted Its Pizza Was Bad",
+     "facts": "In late 2009 Domino's ran ads showing customers calling its crust 'like cardboard', and launched a new recipe ('Pizza Turnaround'). Honesty worked: sales rose strongly in 2010."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "20A",
+     "title": "All Humans Could Fit in a Sugar Cube",
+     "facts": "Atoms are mostly empty space; squeeze it out of all 8 billion people and we'd fit in about a sugar cube, still weighing hundreds of millions of tons."
+    }
+   ]
+  },
+  {
+   "day": 21,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M21",
+     "title": "Give Value First",
+     "facts": "Reciprocity (Robert Cialdini): give something useful free (checklist, sample, tip) before asking; selling gets easier."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "B12",
+     "title": "What LEGO Means",
+     "facts": "Ole Kirk Christiansen started in 1932 in Billund, Denmark, making wooden toys. LEGO comes from Danish 'leg godt', meaning 'play well'."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "22B",
+     "title": "The Sahara Used to Be Green",
+     "facts": "About 11,000 to 5,000 years ago monsoon rains made the Sahara grassland with lakes and hippos; rock art shows giraffes and cattle."
+    }
+   ]
+  },
+  {
+   "day": 22,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M22",
+     "title": "Specific Beats Vague",
+     "facts": "'Save money' sounds like every ad. Specific claims sound true: 'cut your electricity bill by 1,200 a month'. Only use real numbers."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "9C",
+     "title": "The Fax Machine Is Older Than the Phone",
+     "facts": "Alexander Bain patented an image-sending telegraph machine in 1843. The telephone was patented in 1876."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "25B",
+     "title": "Australia Is Wider Than the Moon",
+     "facts": "Mainland Australia is about 4,000 km east to west; the Moon's diameter is about 3,475 km."
+    }
+   ]
+  },
+  {
+   "day": 23,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M23",
+     "title": "Spot Ad Fatigue Early",
+     "facts": "When frequency keeps rising and click-through rate falls, people are tired of the ad. Refresh the image, hook or angle; keep 3-4 versions ready."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "B13",
+     "title": "Where Starbucks Got Its Name",
+     "facts": "Starbucks opened in Seattle in 1971 selling coffee beans, not drinks. Named after Starbuck, the first mate in the novel Moby-Dick."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "26A",
+     "title": "Astronauts See 16 Sunrises a Day",
+     "facts": "The ISS orbits every ~90 minutes at about 28,000 km/h; each orbit brings a sunrise and sunset."
+    }
+   ]
+  },
+  {
+   "day": 24,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M24",
+     "title": "Track Every Link",
+     "facts": "Add UTM tags (source, medium, campaign) to every shared link so Google Analytics shows which post brought the visitor. Google's free Campaign URL Builder makes them."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "B14",
+     "title": "Toyota Started With Weaving Looms",
+     "facts": "Sakichi Toyoda invented automatic looms; Toyoda Automatic Loom Works was founded in 1926. His son Kiichiro started the car division in the 1930s. The name changed to Toyota, which sounded clearer."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "27B",
+     "title": "Point Nemo: Where Astronauts Are the Nearest Humans",
+     "facts": "Point Nemo in the South Pacific is about 2,700 km from land; the ISS orbits about 400 km up. It's also a spacecraft cemetery."
+    }
+   ]
+  },
+  {
+   "day": 25,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M25",
+     "title": "Reply to Every Google Review",
+     "facts": "People read Google reviews before calling. Reply to every review within a day or two; thank by name; for bad ones stay calm, apologise, offer to fix it."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "10C",
+     "title": "Lighters Came Before Matches",
+     "facts": "Johann Döbereiner built a hydrogen lighter (Döbereiner's lamp) in 1823. John Walker invented the friction match in 1826."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "28B",
+     "title": "Everest Isn't the Tallest Mountain",
+     "facts": "Everest is highest above sea level (about 8,850 m). Mauna Kea in Hawaii is over 10,000 m from its base on the seafloor."
+    }
+   ]
+  },
+  {
+   "day": 26,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M26",
+     "title": "Keep Customers, Not Just Find Them",
+     "facts": "Your next sale is easiest from someone who already bought. Thank-you, review request, useful follow-up, reorder reminder."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "B15",
+     "title": "'A Diamond Is Forever'",
+     "facts": "In 1947 copywriter Frances Gerety at the agency N.W. Ayer wrote 'A Diamond Is Forever' for De Beers. It helped make diamond engagement rings a tradition; Advertising Age called it the slogan of the century in 1999."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "29C",
+     "title": "France Has More Time Zones Than Russia",
+     "facts": "Russia has 11 time zones; France has 12 thanks to overseas territories in the Caribbean, Pacific and Indian Ocean."
+    }
+   ]
+  },
+  {
+   "day": 27,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M27",
+     "title": "Bundles Raise Order Value",
+     "facts": "Bundles make choice easier and orders bigger, and make price comparison harder. Price slightly below separate items; name it after the result ('Complete Skincare Kit')."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "B16",
+     "title": "Apple's First Logo",
+     "facts": "Apple's first logo (1976) was a detailed drawing of Isaac Newton sitting under an apple tree, made by co-founder Ronald Wayne. It was replaced in 1977 by Rob Janoff's simple rainbow apple."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "30B",
+     "title": "Africa Is Bigger Than Maps Show",
+     "facts": "Africa is over 30 million km2; the US, China and India fit inside with room left. Mercator maps stretch areas near the poles; Africa is about 14 times bigger than Greenland."
+    }
+   ]
+  },
+  {
+   "day": 28,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M28",
+     "title": "Check It on a Phone",
+     "facts": "Most online shoppers browse on phones. Open your site on your phone: does it load fast, can you tap the buy button with a thumb, can you read without zooming?"
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "B17",
+     "title": "Red Bull Came From Thailand",
+     "facts": "Austrian Dietrich Mateschitz discovered the Thai drink Krating Daeng, made by Chaleo Yoovidhya. They partnered in 1984 and launched Red Bull in Austria in 1987 with a carbonated, adapted recipe."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "4C",
+     "title": "The Shortest War Lasted 38 Minutes",
+     "facts": "The Anglo-Zanzibar War, 27 August 1896, lasted between 38 and 45 minutes."
+    }
+   ]
+  },
+  {
+   "day": 29,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M29",
+     "title": "Fake Urgency Backfires",
+     "facts": "Timers that reset and 'only 2 left' that never changes kill trust. India's 2023 guidelines on dark patterns ban false urgency. Use real deadlines and stock."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "B18",
+     "title": "Dyson's 5,127 Prototypes",
+     "facts": "James Dyson built 5,127 prototypes over about five years before his bagless vacuum cleaner worked. Persistence is part of the product."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "2A",
+     "title": "Bananas Are Berries, Strawberries Aren't",
+     "facts": "Botanically a berry comes from one flower with one ovary and seeds inside: bananas, grapes, tomatoes, avocados qualify; strawberries don't."
+    }
+   ]
+  },
+  {
+   "day": 30,
+   "shorts": [
+    {
+     "slot": "A",
+     "time": "06:30",
+     "pillar": "marketing tip",
+     "id": "M30",
+     "title": "Sell to Someone, Not Everyone",
+     "facts": "A product for everyone speaks to no one. Pick one clear customer: 'lunch boxes for working parents who leave at 7 AM'. Widen later."
+    },
+    {
+     "slot": "B",
+     "time": "13:30",
+     "pillar": "business fact",
+     "id": "B19",
+     "title": "Kodak Invented the Digital Camera",
+     "facts": "Kodak engineer Steve Sasson built the first digital camera in 1975: about 3.6 kg, 0.01 megapixels, 23 seconds to record one image to a cassette tape. Kodak feared hurting film sales; it filed for bankruptcy in 2012."
+    },
+    {
+     "slot": "C",
+     "time": "19:30",
+     "pillar": "interesting fact",
+     "id": "7C",
+     "title": "Myth Busted: Vikings Didn't Wear Horned Helmets",
+     "facts": "No horned Viking-age helmet has been found; horns came from an 1876 opera costume design. Real helmets were simple, rounded iron."
+    }
+   ]
+  }
+ ]
+}
