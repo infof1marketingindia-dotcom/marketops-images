@@ -4,7 +4,7 @@ Reference: videos/MarketOps-Brand-Intro-69s.mp4 (approved by the owner on 10 Nov
 Every new video for the MarketOps YouTube channel should follow this style.
 
 Style
-- 1920x1080, 30 fps. Dark page background #131313 with a soft centre lift, lime #C6F24E only on 1-2 words per screen, Inter ExtraBold/Bold, sentence case.
+- Always 2560x1440 (1440p), 30 fps, as the owner asked on 10 Nov 2026. The first intro was made at 1920x1080; build new videos natively at 1440p (scale all sizes by 4/3), never by upscaling a 1080p render. Thumbnails stay 1280x720 (YouTube's size). Dark page background #131313 with a soft centre lift, lime #C6F24E only on 1-2 words per screen, Inter ExtraBold/Bold, sentence case.
 - Kinetic text: words rise into place one after another; short lines ("Look better. Speak louder. Grow smarter.").
 - Scenes: logo reveal with lime underline, card fan of MarketOps post images (daily/*), tilted wall of posts, website mockup (marketops.in browser frame), numbered service list (big faint numbers, dash progress), value cards (olive badge + lime line icon + faint 01-04), outro with logo, hello@marketops.in and lime marketops.in button, fade to black.
 - Thin lime progress bar along the bottom.
