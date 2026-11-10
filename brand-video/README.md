@@ -1,6 +1,6 @@
 # MarketOps brand video style
 
-Reference: videos/MarketOps-Brand-Intro-69s.mp4 (approved by the owner on 10 Nov 2026).
+Reference: videos/MarketOps-Brand-Intro-69s-1440p.mp4 (1440p remake of videos/MarketOps-Brand-Intro-69s.mp4) (approved by the owner on 10 Nov 2026).
 Every new video for the MarketOps YouTube channel should follow this style.
 
 Style
@@ -13,6 +13,6 @@ Style
 
 Files
 - lines.json: voiceover lines. vo.py makes vo_XX.wav (python3 vo.py af_heart 1.12; model files in kokoro dir).
-- promo.py: GROUPS maps lines to scenes; SCENES lists the scene functions. `python3 promo.py audio`, then `frames t1,t2` to preview, then `render a b out.mp4` in parallel chunks, concat, add mix.wav.
+- promo.py draws in 1920x1080 design units and renders natively at 2560x1440 (K = 4/3, SD() draws scaled, new() makes scaled layers, logo_w() scales the logo). GROUPS maps lines to scenes; SCENES lists the scene functions. `python3 promo.py audio`, then `frames t1,t2` to preview, then `render a b out.mp4` in parallel chunks, concat, add mix.wav.
 - thumb.py: thumbnails.
 Paths inside the scripts point to the scratch folder they were written in; adjust HERE/S before reuse.

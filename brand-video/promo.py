@@ -10,7 +10,8 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = '/home/claude/marketops-images'
-W, H, FPS = 1920, 1080, 30
+W, H, FPS = 1920, 1080, 30   # design units
+K = 4 / 3; PW, PH = 2560, 1440  # pixels (1440p)
 INK = (11, 11, 11); PAGE = (19, 19, 19); CARD = (23, 23, 23); BORDER = (46, 46, 46)
 OLIVE = (53, 57, 28); LIME = (198, 242, 78); WHITE = (255, 255, 255); MUTED = (135, 135, 135); FAINT = (63, 63, 63)
 F800 = REPO + '/youtube-shorts/assets/Inter-ExtraBold.otf'; F700 = REPO + '/youtube-shorts/assets/Inter-Bold.otf'
@@ -25,8 +26,28 @@ def back(t):
 
 _f = {}
 def font(p, s):
-    if (p, s) not in _f: _f[(p, s)] = ImageFont.truetype(p, s)
+    if (p, s) not in _f: _f[(p, s)] = ImageFont.truetype(p, max(1, round(s * K)))
     return _f[(p, s)]
+
+class SD:
+    """ImageDraw that takes design (1920x1080) units and draws at 1440p."""
+    def __init__(s, im): s.d = ImageDraw.Draw(im)
+    def _xy(s, xy):
+        if isinstance(xy[0], (tuple, list)): return [tuple(v * K for v in p) for p in xy]
+        return tuple(v * K for v in xy)
+    def _kw(s, kw):
+        if 'width' in kw: kw['width'] = max(1, round(kw['width'] * K))
+        return kw
+    def rectangle(s, xy, **kw): s.d.rectangle(s._xy(xy), **s._kw(kw))
+    def rounded_rectangle(s, xy, radius=0, **kw): s.d.rounded_rectangle(s._xy(xy), radius=radius * K, **s._kw(kw))
+    def ellipse(s, xy, **kw): s.d.ellipse(s._xy(xy), **s._kw(kw))
+    def line(s, xy, **kw): s.d.line(s._xy(xy), **s._kw(kw))
+    def text(s, xy, t, **kw): s.d.text(s._xy(xy), t, **kw)
+    def textlength(s, t, font): return s.d.textlength(t, font=font) / K
+
+def new(w, h, c=(0, 0, 0, 0)): return Image.new('RGBA', (round(w * K), round(h * K)), c)
+def logo_w(A, lw):
+    lw = round(lw * K); return A['logo'].resize((lw, int(lw * A['logo'].height / A['logo'].width)), Image.LANCZOS)
 
 # ------------------------------------------------------------------ audio
 SR = 44100
@@ -135,19 +156,20 @@ def load_assets():
     posts = sorted(glob.glob(REPO + '/daily/*/1[0-9]00.png'))
     imgs = []
     for p in posts:
-        im = Image.open(p).convert('RGB').resize((432, 540), Image.LANCZOS)
-        card = Image.new('RGBA', (432, 540), (0, 0, 0, 0)); m = Image.new('L', (432, 540), 0)
-        ImageDraw.Draw(m).rounded_rectangle((0, 0, 431, 539), radius=22, fill=255)
+        cw0, ch0 = 576, 720
+        im = Image.open(p).convert('RGB').resize((cw0, ch0), Image.LANCZOS)
+        card = Image.new('RGBA', (cw0, ch0), (0, 0, 0, 0)); m = Image.new('L', (cw0, ch0), 0)
+        ImageDraw.Draw(m).rounded_rectangle((0, 0, cw0 - 1, ch0 - 1), radius=29, fill=255)
         card.paste(im, (0, 0), m); imgs.append(card)
     A['cards'] = imgs
     # tilted wall mosaic
-    cw, ch, gap = 300, 375, 30; cols, rows = 9, 5
+    cw, ch, gap = 400, 500, 40; cols, rows = 9, 5
     mos = Image.new('RGBA', (cols * (cw + gap), rows * (ch + gap)), (0, 0, 0, 0))
     k = 0
     for r in range(rows):
         for c in range(cols):
             im = imgs[(k * 7) % len(imgs)].resize((cw, ch), Image.LANCZOS); k += 1
-            mos.alpha_composite(im, (c * (cw + gap) + (r % 2) * 60, r * (ch + gap)))
+            mos.alpha_composite(im, (c * (cw + gap) + (r % 2) * 80, r * (ch + gap)))
     A['wall'] = mos.rotate(16, resample=Image.BICUBIC, expand=True)
     return A
 
@@ -178,6 +200,7 @@ def word_img(word, size, fp, color):
 
 def kinetic(im, text, t, cx, cy, size, fp=F800, color=WHITE, maxw=1600, stagger=0.07, dur=0.45, align='center', lh=1.08, out_t=None):
     """Words rise into place one after another. t = seconds since the text starts."""
+    cx, cy, maxw = cx * K, cy * K, maxw * K; px = size * K
     words = parse(text); f = font(fp, size); d = ImageDraw.Draw(Image.new('RGBA', (8, 8)))
     space = d.textlength(' ', font=f)
     imgs = [word_img(w, size, fp, color) for w in words]
@@ -185,7 +208,7 @@ def kinetic(im, text, t, cx, cy, size, fp=F800, color=WHITE, maxw=1600, stagger=
     for wi in imgs:
         if lines[-1] and lw + space + wi.width > maxw: lines.append([]); lw = 0
         lines[-1].append(wi); lw += wi.width + (space if len(lines[-1]) > 1 else 0)
-    LH = int(size * lh); y0 = cy - LH * len(lines) / 2; k = 0
+    LH = int(px * lh); y0 = cy - LH * len(lines) / 2; k = 0
     for li, ln in enumerate(lines):
         tw = sum(w.width for w in ln) + space * (len(ln) - 1)
         x = cx - tw / 2 if align == 'center' else cx
@@ -193,7 +216,7 @@ def kinetic(im, text, t, cx, cy, size, fp=F800, color=WHITE, maxw=1600, stagger=
             p = ease((t - k * stagger) / dur)
             if out_t is not None: p *= 1 - ease((t - out_t) / 0.25)
             if p > 0.01:
-                dy = (1 - p) * size * 0.6
+                dy = (1 - p) * px * 0.6
                 ww = w
                 if p < 0.99:
                     ww = w.copy(); ww.putalpha(w.getchannel('A').point(lambda v, p=p: int(v * p)))
@@ -203,7 +226,7 @@ def kinetic(im, text, t, cx, cy, size, fp=F800, color=WHITE, maxw=1600, stagger=
 def label(im, text, cx, cy, size=30, color=MUTED, fp=F400, alpha=1.0, anchor='mm'):
     if alpha <= 0.01: return
     lay = Image.new('RGBA', im.size, (0, 0, 0, 0)); d = ImageDraw.Draw(lay)
-    d.text((cx, cy), text, font=font(fp, size), fill=color + (int(255 * alpha),), anchor=anchor)
+    d.text((cx * K, cy * K), text, font=font(fp, size), fill=color + (int(255 * alpha),), anchor=anchor)
     im.alpha_composite(lay)
 
 def paste(im, src, cx, cy, scale=1.0, rot=0.0, alpha=1.0):
@@ -212,22 +235,22 @@ def paste(im, src, cx, cy, scale=1.0, rot=0.0, alpha=1.0):
     if abs(scale - 1) > 0.005: s = s.resize((max(1, int(s.width * scale)), max(1, int(s.height * scale))), Image.BILINEAR)
     if abs(rot) > 0.05: s = s.rotate(rot, resample=Image.BICUBIC, expand=True)
     if alpha < 0.99: s = s.copy(); s.putalpha(s.getchannel('A').point(lambda v: int(v * alpha)))
-    x, y = int(cx - s.width / 2), int(cy - s.height / 2)
-    im.alpha_composite(s, (x, y)) if x >= 0 and y >= 0 and x + s.width <= W and y + s.height <= H else _safe(im, s, x, y)
+    x, y = int(cx * K - s.width / 2), int(cy * K - s.height / 2)
+    im.alpha_composite(s, (x, y)) if x >= 0 and y >= 0 and x + s.width <= PW and y + s.height <= PH else _safe(im, s, x, y)
 
 def _safe(im, s, x, y):
     lay = Image.new('RGBA', im.size, (0, 0, 0, 0)); lay.paste(s, (x, y), s); im.alpha_composite(lay)
 
 def square(im, x, y, s, a=1.0):
-    ImageDraw.Draw(im).rectangle((x, y, x + s, y + s), fill=LIME + (int(255 * a),))
+    SD(im).rectangle((x, y, x + s, y + s), fill=LIME + (int(255 * a),))
 
 # ------------------------------------------------------------------ scenes
 def sc_logo(im, t, d, A, L):
     p = back(t / 0.7); lw = 900
-    lg = A['logo'].resize((lw, int(lw * A['logo'].height / A['logo'].width)), Image.LANCZOS)
+    lg = logo_w(A, lw)
     paste(im, lg, W / 2, H / 2 - 20, scale=0.85 + 0.15 * p, alpha=ease(t / 0.5))
     wln = int(700 * ease((t - 0.4) / 0.6))
-    ImageDraw.Draw(im).rectangle((W / 2 - wln / 2, H / 2 + 110, W / 2 + wln / 2, H / 2 + 114), fill=LIME)
+    SD(im).rectangle((W / 2 - wln / 2, H / 2 + 110, W / 2 + wln / 2, H / 2 + 114), fill=LIME)
 
 def sc_agency(im, t, d, A, L):
     kinetic(im, 'Ecommerce. Advertising. [Creative.]', t, W / 2, H / 2 - 50, 120, maxw=1800)
@@ -266,10 +289,8 @@ def sc_partners(im, t, d, A, L):
         kinetic(im, f'[{words[i]}]' if i == 3 else words[i], lt, W / 2, H / 2 + 20, 170, stagger=0)
     else:
         wall = A['wall']; ox = -200 - t2 * 60; oy = -350 + t2 * 25
-        paste(im, wall, W / 2 + ox + wall.width / 2 - W / 2 + 200, H / 2 + oy + wall.height / 2 - H / 2, alpha=ease(t2 / 0.5))
-        ov = Image.new('RGBA', (W, H), (0, 0, 0, 0)); g = np.linspace(0, 1, W)
-        dark = (np.clip(1.4 - np.abs(np.arange(H)[:, None] - H / 2) / (H / 2) * 0.0 - 0.0, 0, 1) * 0 + 0.62)
-        ov = Image.new('RGBA', (W, H), PAGE + (int(255 * 0.62),)); im.alpha_composite(ov)
+        paste(im, wall, ox + wall.width / K / 2 + 200, oy + wall.height / K / 2, alpha=ease(t2 / 0.5))
+        ov = Image.new('RGBA', (PW, PH), PAGE + (int(255 * 0.62),)); im.alpha_composite(ov)
         kinetic(im, 'Ideas into meaningful [brand experiences.]', t2, W / 2, H / 2, 110, maxw=1500)
 
 SERV = [('01', 'Branding & creative design'), ('02', 'Social media marketing'), ('03', 'Performance marketing'),
@@ -295,18 +316,18 @@ def sc_services(im, t, d, A, L):
     c = A['cards'][(i * 5 + 2) % len(A['cards'])]
     paste(im, c, 1500 + (1 - ease(lt / 0.5)) * 400, H / 2, scale=1.25, rot=-6, alpha=ease(lt / 0.4))
     for k in range(6):
-        ImageDraw.Draw(im).rectangle((520 + k * 46, H / 2 + 200, 520 + k * 46 + 34, H / 2 + 206), fill=LIME if k == i else BORDER)
+        SD(im).rectangle((520 + k * 46, H / 2 + 200, 520 + k * 46 + 34, H / 2 + 206), fill=LIME if k == i else BORDER)
 
 def browser(im, t, A, alpha):
     bw, bh = 1360, 780; x0, y0 = (W - bw) / 2, 170 + (1 - ease(t / 0.6)) * 300
-    lay = Image.new('RGBA', (bw, bh), (0, 0, 0, 0)); d = ImageDraw.Draw(lay)
+    lay = new(bw, bh); d = SD(lay)
     d.rounded_rectangle((0, 0, bw - 1, bh - 1), radius=24, fill=CARD, outline=BORDER, width=2)
     for k, c in enumerate(((70, 70, 70), (70, 70, 70), (70, 70, 70))): d.ellipse((28 + k * 30, 26, 44 + k * 30, 42), fill=c)
     d.rounded_rectangle((bw / 2 - 180, 18, bw / 2 + 180, 52), radius=17, fill=PAGE); d.text((bw / 2, 35), 'marketops.in', font=font(F700, 22), fill=MUTED, anchor='mm')
     d.line((0, 70, bw, 70), fill=BORDER, width=2)
     scroll = min(1, max(0, (t - 1.6) / 1.6)) * 330
-    content = Image.new('RGBA', (bw - 4, 1200), PAGE + (255,)); cd = ImageDraw.Draw(content)
-    lg = A['logo'].resize((220, int(220 * A['logo'].height / A['logo'].width)), Image.LANCZOS); content.alpha_composite(lg, (50, 30))
+    content = new(bw - 4, 1200, PAGE + (255,)); cd = SD(content)
+    lg = logo_w(A, 220); content.alpha_composite(lg, (round(50 * K), round(30 * K)))
     for k, m in enumerate(['Services', 'Work', 'Contact']): cd.text((bw - 420 + k * 130, 42), m, font=font(F400, 22), fill=MUTED)
     cd.text((60, 170), "Built for the brands", font=font(F800, 72), fill=WHITE)
     cd.text((60, 255), "that don't settle", font=font(F800, 72), fill=WHITE)
@@ -321,9 +342,9 @@ def browser(im, t, A, alpha):
         cd.text((cx0 + 360, cy0 + 30), f'0{k + 1}', font=font(F800, 40), fill=FAINT, anchor='ra')
         cd.text((cx0 + 28, cy0 + 120), n, font=font(F700, 30), fill=WHITE)
         cd.text((cx0 + 28, cy0 + 175), 'Explore service ↗', font=font(F400, 22), fill=MUTED)
-    lay.alpha_composite(content.crop((0, int(scroll), bw - 4, int(scroll) + bh - 74)), (2, 72))
+    lay.alpha_composite(content.crop((0, round(scroll * K), round((bw - 4) * K), round((scroll + bh - 74) * K))), (round(2 * K), round(72 * K)))
     if alpha < 0.99: lay.putalpha(lay.getchannel('A').point(lambda v: int(v * alpha)))
-    im.alpha_composite(lay, (int(x0), int(y0)))
+    im.alpha_composite(lay, (round(x0 * K), round(y0 * K)))
 
 def sc_build(im, t, d, A, L):
     st = L['starts']; split = st[15] - L['scene_start']
@@ -339,11 +360,11 @@ def sc_build(im, t, d, A, L):
 
 def sc_impact(im, t, d, A, L):
     kinetic(im, 'Imagination', t, W / 2, H / 2 - 120, 150, color=MUTED)
-    a = ease((t - 0.55) / 0.3); ImageDraw.Draw(im).line((W / 2, H / 2 - 40, W / 2, H / 2 + 20), fill=LIME + (int(255 * a),), width=4)
+    a = ease((t - 0.55) / 0.3); SD(im).line((W / 2, H / 2 - 40, W / 2, H / 2 + 20), fill=LIME + (int(255 * a),), width=4)
     kinetic(im, 'into [impact.]', t - 0.7, W / 2, H / 2 + 110, 170)
 
 def sc_name(im, t, d, A, L):
-    lw = 1100; lg = A['logo'].resize((lw, int(lw * A['logo'].height / A['logo'].width)), Image.LANCZOS)
+    lw = 1100; lg = logo_w(A, lw)
     paste(im, lg, W / 2, H / 2 - 60, scale=0.95 + 0.05 * ease(t / 1.2), alpha=ease(t / 0.4))
     label(im, 'Where brands sell', W / 2 - 250, H / 2 + 110, 34, MUTED, F700, alpha=ease((t - 0.5) / 0.4))
     label(im, 'The work that makes it happen', W / 2 + 330, H / 2 + 110, 34, LIME, F700, alpha=ease((t - 0.9) / 0.4))
@@ -356,8 +377,8 @@ def sc_mission(im, t, d, A, L):
 def sc_notjust(im, t, d, A, L):
     kinetic(im, "We don't just create designs", t, W / 2, H / 2 - 90, 100, color=MUTED)
     kinetic(im, 'and spend money.', t - 0.6, W / 2, H / 2 + 50, 100, color=MUTED)
-    a = ease((t - 1.5) / 0.4); f = font(F800, 100); tw = ImageDraw.Draw(im).textlength('and spend money.', font=f)
-    ImageDraw.Draw(im).rectangle((W / 2 - tw / 2, H / 2 + 108, W / 2 - tw / 2 + tw * a, H / 2 + 116), fill=LIME)
+    a = ease((t - 1.5) / 0.4); f = font(F800, 100); tw = SD(im).textlength('and spend money.', font=f)
+    SD(im).rectangle((W / 2 - tw / 2, H / 2 + 108, W / 2 - tw / 2 + tw * a, H / 2 + 116), fill=LIME)
 
 def sc_define(im, t, d, A, L):
     for i, s in enumerate(['Define [brands.]', 'Tell stories.', 'Build connections.']):
@@ -386,7 +407,7 @@ def sc_values(im, t, d, A, L):
     for i, n in enumerate(names):
         p = back((lt - i * L['durs'][22] / 4.5) / 0.5); a = ease((lt - i * L['durs'][22] / 4.5) / 0.3)
         if a <= 0.01: continue
-        cw, chh = 380, 430; lay = Image.new('RGBA', (cw, chh), (0, 0, 0, 0)); dd = ImageDraw.Draw(lay)
+        cw, chh = 380, 430; lay = new(cw, chh); dd = SD(lay)
         dd.rounded_rectangle((0, 0, cw - 1, chh - 1), radius=24, fill=CARD, outline=BORDER, width=2)
         dd.ellipse((32, 32, 120, 120), fill=OLIVE); icon(dd, i, 76, 76)
         dd.text((cw - 32, 36), f'0{i + 1}', font=font(F800, 64), fill=FAINT, anchor='ra')
@@ -402,18 +423,18 @@ def sc_future(im, t, d, A, L):
     kinetic(im, 'The future belongs to those who dare to [create.]', t, W / 2, H / 2, 112, maxw=1500, stagger=0.06)
 
 def sc_outro(im, t, d, A, L):
-    lw = 760; lg = A['logo'].resize((lw, int(lw * A['logo'].height / A['logo'].width)), Image.LANCZOS)
+    lw = 760; lg = logo_w(A, lw)
     paste(im, lg, W / 2, H / 2 - 150, scale=0.9 + 0.1 * back(t / 0.6), alpha=ease(t / 0.4))
     label(im, 'For enquiries', W / 2, H / 2 + 10, 34, MUTED, F700, alpha=ease((t - 0.3) / 0.4))
     label(im, 'hello@marketops.in', W / 2, H / 2 + 75, 54, WHITE, F800, alpha=ease((t - 0.5) / 0.4))
     a = ease((t - 0.8) / 0.4)
     if a > 0.01:
-        lay = Image.new('RGBA', (W, H), (0, 0, 0, 0)); dd = ImageDraw.Draw(lay)
+        lay = Image.new('RGBA', (PW, PH), (0, 0, 0, 0)); dd = SD(lay)
         dd.rounded_rectangle((W / 2 - 190, H / 2 + 140, W / 2 + 190, H / 2 + 222), radius=41, fill=LIME + (int(255 * a),))
         dd.text((W / 2, H / 2 + 181), 'marketops.in', font=font(F800, 40), fill=INK + (int(255 * a),), anchor='mm')
         im.alpha_composite(lay)
     fa = ease((t - d + 1.0) / 0.9)
-    if fa > 0: im.alpha_composite(Image.new('RGBA', (W, H), INK + (int(255 * fa),)))
+    if fa > 0: im.alpha_composite(Image.new('RGBA', (PW, PH), INK + (int(255 * fa),)))
 
 SCENES = [sc_logo, sc_agency, sc_three, sc_fan, sc_belief, sc_spe, sc_partners, sc_services, sc_build, sc_impact,
           sc_name, sc_mission, sc_notjust, sc_define, sc_values, sc_together, sc_future, sc_outro]
@@ -423,11 +444,10 @@ _base = None
 def base():
     global _base
     if _base is None:
-        b = Image.new('RGBA', (W, H), PAGE + (255,))
-        y, x = np.mgrid[0:H, 0:W]; r = np.sqrt(((x - W / 2) / W) ** 2 + ((y - H / 2) / H) ** 2)
+        y, x = np.mgrid[0:PH, 0:PW]; r = np.sqrt(((x - PW / 2) / PW) ** 2 + ((y - PH / 2) / PH) ** 2)
         v = np.clip(1 - r * 1.2, 0, 1)[..., None]
         arr = (np.array(PAGE) * (1 - v * 0.0) + (np.array(CARD) - np.array(PAGE)) * v * 1.4).clip(0, 255).astype(np.uint8)
-        _base = Image.fromarray(np.dstack([arr, np.full((H, W), 255, np.uint8)]), 'RGBA')
+        _base = Image.fromarray(np.dstack([arr, np.full((PH, PW), 255, np.uint8)]), 'RGBA')
     return _base
 
 def frame(t, A, L):
@@ -438,7 +458,7 @@ def frame(t, A, L):
     L['scene_start'] = a
     SCENES[i](im, t - a, b - a, A, L)
     # progress line + corner mark
-    ImageDraw.Draw(im).rectangle((0, H - 6, int(W * t / TARGET), H), fill=LIME)
+    SD(im).rectangle((0, H - 6, int(W * t / TARGET), H), fill=LIME)
     return im.convert('RGB')
 
 def main():
@@ -450,8 +470,8 @@ def main():
             frame(float(s), A, L).save(HERE + f'/pv_{float(s):05.2f}.png')
         return
     a, b, out = int(sys.argv[2]), int(sys.argv[3]), sys.argv[4]
-    p = subprocess.Popen(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-',
-                          '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '19', '-pix_fmt', 'yuv420p', out + '.tmp.mp4'], stdin=subprocess.PIPE)
+    p = subprocess.Popen(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{PW}x{PH}', '-r', str(FPS), '-i', '-',
+                          '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18', '-pix_fmt', 'yuv420p', out + '.tmp.mp4'], stdin=subprocess.PIPE)
     for k in range(a, b): p.stdin.write(frame(k / FPS, A, L).tobytes())
     p.stdin.close()
     if p.wait() == 0: os.replace(out + '.tmp.mp4', out)
