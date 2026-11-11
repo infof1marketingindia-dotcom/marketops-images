@@ -1,0 +1,51 @@
+[
+  {
+    "slot": "1000",
+    "service": "Ecommerce Solutions",
+    "topic": "Listing and catalogue errors",
+    "problem": "Product listings keep showing errors: wrong categories, incomplete details and broken variations, so products are harder to find and buy.",
+    "solution": "The MarketOps Ecommerce Solutions team finds every listing error, fixes titles and categories, cleans up product variations and checks the catalogue every week so problems do not come back.",
+    "title": "My listings keep showing errors",
+    "items": [
+      "We find every listing error",
+      "We fix titles and categories",
+      "We clean up product variations",
+      "We check the catalogue weekly"
+    ],
+    "line": "MarketOps Ecommerce Solutions. Clean listings, steady sales.",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-11/1000.png"
+  },
+  {
+    "slot": "1600",
+    "service": "Performance Ads",
+    "topic": "Ad clicks that never turn into sales",
+    "problem": "Ads get plenty of clicks, but many come from search terms that never lead to a sale, so budget is spent with little return.",
+    "solution": "The MarketOps Performance Ads team finds the search terms that never sell, stops paying for them, moves budget to the terms that do sell and reviews search terms every week.",
+    "title": "My ads get clicks but no sales",
+    "items": [
+      "We find terms that never sell",
+      "We stop paying for them",
+      "We move budget to what sells",
+      "We check search terms weekly"
+    ],
+    "line": "MarketOps Performance Ads. Ads aimed at real buyers.",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-11/1600.png"
+  },
+  {
+    "slot": "1900",
+    "service": "Web Development",
+    "topic": "Visitors leave the website without buying",
+    "problem": "People visit the brand website but leave without buying because product pages are slow, prices and details are unclear and checkout feels long.",
+    "solution": "The MarketOps Web Development team speeds up product pages, makes prices and details clear, keeps checkout short and adds the details buyers need to trust the site.",
+    "title": "Visitors leave my site without buying",
+    "items": [
+      "We speed up product pages",
+      "We make prices clear",
+      "We keep checkout short",
+      "We add details buyers trust"
+    ],
+    "line": "MarketOps Web Development. Websites built to sell.",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-11/1900.png",
+    "video_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-11/1900.mp4"
+  }
+]
