@@ -1,9 +1,12 @@
 {
- "next_day": 2,
- "last_for_date": "2026-11-11",
+ "next_day": 3,
+ "last_for_date": "2026-11-12",
  "done": [
   "M1",
   "B1",
-  "1A"
+  "1A",
+  "M2",
+  "21C",
+  "1B"
  ]
 }
