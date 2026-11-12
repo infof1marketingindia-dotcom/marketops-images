@@ -1,0 +1,51 @@
+[
+  {
+    "slot": "1000",
+    "service": "SEO",
+    "topic": "Traffic that never turns into enquiries",
+    "problem": "The website gets visitors from search, but they are not buyers, or they leave without getting in touch, so the traffic never turns into enquiries.",
+    "solution": "The MarketOps SEO team targets searches with buying intent, builds pages that answer what buyers want to know, guides visitors to make an enquiry, and tracks enquiries every month, not just visits.",
+    "title": "My site gets traffic but no enquiries",
+    "items": [
+      "We target buying searches",
+      "We build pages for buyers",
+      "We guide visitors to enquire",
+      "We track enquiries monthly"
+    ],
+    "line": "MarketOps SEO. Traffic that turns into enquiries.",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-12/1000.png"
+  },
+  {
+    "slot": "1600",
+    "service": "Overseas Growth",
+    "topic": "Listings not adapted to buyers abroad",
+    "problem": "The seller has listings live in another country, but they are copied from India with local terms, sizes and searches ignored, so buyers abroad do not buy.",
+    "solution": "The MarketOps Overseas Growth team adapts listings for local buyers, uses local sizes, units and terms, researches what buyers in that country search for, and runs targeted campaigns abroad.",
+    "title": "My listings don't sell abroad",
+    "items": [
+      "We adapt listings locally",
+      "We use local sizes and units",
+      "We find what buyers search",
+      "We run campaigns abroad"
+    ],
+    "line": "MarketOps Overseas Growth. Made for buyers abroad.",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-12/1600.png"
+  },
+  {
+    "slot": "1900",
+    "service": "Creative Studio",
+    "topic": "Brand looks different everywhere",
+    "problem": "Product images, listings, ads and social posts all look different, so shoppers do not recognise the brand and find it harder to trust.",
+    "solution": "The MarketOps Creative Studio team sets one clear brand look, designs images for every listing, matches ads and social posts to it, and keeps every new visual on brand.",
+    "title": "My brand looks different everywhere",
+    "items": [
+      "We set one brand look",
+      "We design every listing",
+      "We match ads and posts",
+      "We keep visuals on brand"
+    ],
+    "line": "MarketOps Creative Studio. One look everywhere.",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-12/1900.png",
+    "video_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-12/1900.mp4"
+  }
+]
