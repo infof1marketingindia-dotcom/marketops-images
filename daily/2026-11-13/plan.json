@@ -1,0 +1,51 @@
+[
+  {
+    "slot": "1000",
+    "service": "Ecommerce Solutions",
+    "topic": "Account health warnings",
+    "problem": "The seller keeps getting account health warnings on their marketplace account and does not know what is causing them, which puts listings and sales at risk.",
+    "solution": "The MarketOps Ecommerce Solutions team checks account health every day, finds the cause of each warning, fixes the root problem in listings and operations, and keeps watch so it does not come back.",
+    "title": "Account health warnings keep coming",
+    "items": [
+      "We check your account daily",
+      "We find each warning's cause",
+      "We fix the root problem",
+      "We watch so it stays fixed"
+    ],
+    "line": "MarketOps Ecommerce Solutions. Accounts looked after daily.",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-13/1000.png"
+  },
+  {
+    "slot": "1600",
+    "service": "Performance Ads",
+    "topic": "Ad spend wasted on search terms that never sell",
+    "problem": "Ad money goes on search terms that bring clicks but never turn into orders, so spend goes up without sales.",
+    "solution": "The MarketOps Performance Ads team reviews every search term, cuts the ones that never sell, moves budget to terms that bring orders, and reviews spend every week.",
+    "title": "My ads pay for searches that never sell",
+    "items": [
+      "We read every search term",
+      "We cut terms that never sell",
+      "We move budget to terms that do",
+      "We review spend every week"
+    ],
+    "line": "MarketOps Performance Ads. Every rupee spent on buyers.",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-13/1600.png"
+  },
+  {
+    "slot": "1900",
+    "service": "Web Development",
+    "topic": "Slow and confusing product pages",
+    "problem": "Product pages on the brand's own website load slowly and are hard to follow, so visitors leave before they buy.",
+    "solution": "The MarketOps Web Development team makes pages load fast, puts price and offer up front, writes clear product details and makes checkout simple.",
+    "title": "My product pages are slow and confusing",
+    "items": [
+      "We make pages load fast",
+      "We put price and offer up front",
+      "We write clear product details",
+      "We make checkout simple"
+    ],
+    "line": "MarketOps Web Development. Pages built to sell.",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-13/1900.png",
+    "video_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-13/1900.mp4"
+  }
+]
