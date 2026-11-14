@@ -1,0 +1,51 @@
+[
+  {
+    "slot": "1000",
+    "service": "SEO",
+    "topic": "Site not found by new buyers in search",
+    "problem": "The website shows up when people search the brand name, but buyers who do not know the brand yet never find it when they search for the product.",
+    "solution": "The MarketOps SEO team finds what new buyers search for, builds pages that match those searches, fixes the issues that stop pages from ranking, and tracks new visitors from search every month.",
+    "title": "New buyers can't find my site in search",
+    "items": [
+      "We find what buyers search",
+      "We build pages for them",
+      "We fix what blocks ranking",
+      "We track new visitors"
+    ],
+    "line": "MarketOps SEO. Found by new buyers.",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-14/1000.png"
+  },
+  {
+    "slot": "1600",
+    "service": "Overseas Growth",
+    "topic": "Ads abroad reaching the wrong buyers",
+    "problem": "The seller runs ads in another country, but they reach people who are unlikely to buy, so money is spent with few sales.",
+    "solution": "The MarketOps Overseas Growth team picks the right country first, targets buyers who fit the product, cuts spend that is not turning into sales, and matches each ad to a local listing.",
+    "title": "My ads abroad reach the wrong buyers",
+    "items": [
+      "We pick the right country",
+      "We target buyers who fit",
+      "We cut spend that won't sell",
+      "We match ads to listings"
+    ],
+    "line": "MarketOps Overseas Growth. Aimed at the right buyers.",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-14/1600.png"
+  },
+  {
+    "slot": "1900",
+    "service": "Creative Studio",
+    "topic": "Product images that do not explain the product",
+    "problem": "Shoppers cannot tell from the images what the product does, how big it is or why it is better, so they scroll past.",
+    "solution": "The MarketOps Creative Studio team shows the product in use, adds size and detail shots, puts key features on the images, and designs every image to read clearly on a phone screen.",
+    "title": "My product images don't explain the product",
+    "items": [
+      "We show the product in use",
+      "We add size and detail shots",
+      "We put features on images",
+      "We design for phones"
+    ],
+    "line": "MarketOps Creative Studio. Clear at a glance.",
+    "image_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-14/1900.png",
+    "video_url": "https://raw.githubusercontent.com/infof1marketingindia-dotcom/marketops-images/main/daily/2026-11-14/1900.mp4"
+  }
+]
